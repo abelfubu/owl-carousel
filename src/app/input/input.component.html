@@ -1,0 +1,10 @@
+<mat-form-field>
+  <mat-label>{{ label }}</mat-label>
+  <input matInput [formControl]="control" [type]="inputType" />
+  <mat-error *ngIf="input?.required">Field is required</mat-error>
+  <mat-error *ngIf="input?.email">Field must be an email</mat-error>
+  <mat-error *ngIf="input?.minlength">
+    {{ label }} must be at least {{ input.minlength.requiredLength }} characters
+    long.
+  </mat-error>
+</mat-form-field>

@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-title>
+    <h1>Wellcome</h1>
+  </mat-card-title>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <fb-input
+      label="Username"
+      inputType="text"
+      [control]="form.controls.username"
+    ></fb-input>
+    <fb-input
+      label="Email"
+      inputType="email"
+      [control]="form.controls.email"
+    ></fb-input>
+    <fb-input
+      label="Password"
+      inputType="password"
+      [control]="form.controls.password"
+    ></fb-input>
+    <button mat-stroked-button color="primary">Hello</button>
+  </form>
+</mat-card>
