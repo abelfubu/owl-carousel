@@ -1,0 +1,14 @@
+<owl-carousel-o [options]="customOptions" #owlCar>
+  <ng-container *ngFor="let slide of images">
+    <ng-template carouselSlide [id]="slide.id">
+      <img [src]="slide" [alt]="slide.toString()" [title]="'Hello'" />
+    </ng-template>
+  </ng-container>
+</owl-carousel-o>
+
+<button mat-mini-fab color="primary" class="left" (click)="owlCar.prev()">
+  <mat-icon>chevron_left</mat-icon>
+</button>
+<button mat-mini-fab color="primary" class="right" (click)="owlCar.next()">
+  <mat-icon>chevron_right</mat-icon>
+</button>

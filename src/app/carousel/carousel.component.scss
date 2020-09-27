@@ -1,0 +1,31 @@
+:host {
+  display: block;
+  // height: 200px;
+  position: relative;
+  width: 50%;
+  margin: auto;
+
+  button {
+    position: absolute;
+    top: 92px;
+    background: black;
+    z-index: 10;
+  }
+
+  .right {
+    right: 22px;
+  }
+  .left {
+    left: 22px;
+  }
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  transition: all 300ms ease-in;
+}
+
+img {
+  height: 200px;
+}
